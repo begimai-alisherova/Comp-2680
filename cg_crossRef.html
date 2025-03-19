@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+    Final Project: Common Grounds Coffee Shop
+    
+    Cross-Reference Page
+    Author: Begimai Alisherova
+    Date:   11/16/2023
+
+    Filename: cg_crossRef.html
+   -->
+    <style>
+		body{
+			margin: 0;
+		}
+		.container{
+			padding-top: 100px;
+		}
+		ul {
+			margin: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+
+		table{
+		margin-left:auto;
+		margin-right:auto;
+		}
+		table, th, td {
+		border: 1px solid blue;
+		border-collapse:collapse;
+		text-align:center;
+		}
+		tr{
+		height:30px;
+		}
+
+		tr td:last-child:hover {
+			text-decoration: underline;
+			color: #f57621;
+			cursor: pointer;
+		}
+	</style>
+	<link href="cg_index.css" rel="stylesheet" />
+	<link href="cg_styles.css" rel="stylesheet" />
+</head>
+
+
+<!--- This fulfils requirement 5.4(a) -->
+<body>
+	<header>
+		<img src="cg_logo.svg" onclick="goToHomePage()" alt="Common Grounds Logo" />
+		   <nav class="horizontalNavigation">
+			  <ul>
+				 <li><a href="index.html"> Home</a></li>
+				 <li><a href="cg_about.html">About Us</a></li>
+				 <li><a href="cg_contact.html">Contact Us</a></li>
+				 <li><a href="cg_crossRef.html">Cross-Ref</a></li>
+			  </ul>
+		   </nav>
+	 </header>
+	 <div class="container">
+		 <h2><center>Table 1: Cross Reference page Table Sample</center></h2>
+		 <h3><center>Work done by Begimai Alisherova</center></h3>
+		 <table style="width:80%;">
+			 <tr>
+				 <th>Requirement #</th>
+				 <th>Requirement description</th>
+				 <th>Page Name</th>
+			 </tr>
+			 <tr>
+				 <td>5.1(a)</td>
+				 <td>Section tags</td>
+				 <td onclick="goTo('index.html')">index.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.1(b)</td>
+				 <td>Static image</td>
+				 <td onclick="goTo('index.html')">index.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.1(b)</td>
+				 <td>Clickable image</td>
+				 <td onclick="goTo('cg_about.html')">cg_about.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.1(c)</td>
+				 <td>Background image</td>
+				 <td onclick="goTo('cg_contact.html')">cg_contact.html</td>
+			 </tr>
+			 <tr>	
+				 <td>5.1(d)</td>
+				 <td>Special Characters</td>
+				 <td onclick="goTo('cg_contact.html')">cg_contact.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.1(e)</td>
+				 <td>Meta tags</td>
+				 <td onclick="goTo('index.html')">index.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.1(f)</td>
+				 <td>Footer with a link</td>
+				 <td onclick="goTo('index.html')">index.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.1(g)</td>
+				 <td>Last updated in footer</td>
+				 <td onclick="goTo('cg_about.html')">cg_about.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.2(a)</td>
+				 <td>CSS formatting</td>
+				 <td onclick="goTo('')">cg_styles.css</td>
+			 </tr>
+			 <tr>
+				 <td>5.2(b)</td>
+				 <td>CSS selectors</td>
+				 <td onclick="goTo('')">cg_about.css</td>
+			 </tr>
+			 <tr>
+				 <td>5.2(c)</td>
+				 <td>CSS color</td>
+				 <td onclick="goTo('')">cg_contact.css</td>
+			 </tr>
+			 <tr>
+				 <td>5.2(d)</td>
+				 <td>Pseudo-classes</td>
+				 <td onclick="goTo('')">cg_contact.css</td>
+			 </tr>
+			 <tr>
+				 <td>5.2(e)</td>
+				 <td>CSS background styles</td>
+				 <td onclick="goTo('')">cg_contact.css</td>
+			 </tr>
+			 <tr>
+				 <td>5.2(f)</td>
+				 <td>Float</td>
+				 <td onclick="goTo('index.html')">index.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.2(f)</td>
+				 <td>Grid</td>
+				 <td onclick="goTo('cg_about.html')">cg_about.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.2(g)</td>
+				 <td>Box shadow</td>
+				 <td onclick="goTo('')">cg_contact.css</td>
+			 </tr>
+			 <tr>
+				 <td>5.2(h)</td>
+				 <td>Opacity</td>
+				 <td onclick="goTo('')">cg_about.css</td>
+			 </tr>
+			 <tr>
+				 <td>5.3(a)</td>
+				 <td>Form</td>
+				 <td onclick="goTo('cg_contact.html')">cg_contact.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.3(b)</td>
+				 <td>Web Form styles</td>
+				 <td onclick="goTo('')">cg_contact.css</td>
+			 </tr>
+			 <tr>
+				 <td>5.3(c)</td>
+				 <td>Web Form Validation</td>
+				 <td onclick="goTo('')">cg_contact.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.4(a)</td>
+				 <td>Web Table</td>
+				 <td onclick="goTo('cg_crossRef.html')">cg_crossRef.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.5(a)</td>
+				 <td>Video</td>
+				 <td onclick="goTo('cg_about.html')">cg_about.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.5(b)</td>
+				 <td>Animations</td>
+				 <td onclick="goTo('cg_about.html')">cg_about.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.6(a)</td>
+				 <td>System Date</td>
+				 <td onclick="goTo('cg_contact.html')">cg_contact.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.6(b)</td>
+				 <td>Validating form</td>
+				 <td onclick="goTo('')">cg_contact.css</td>
+			 </tr>
+			 <tr>
+				 <td>5.6(c)</td>
+				 <td>JS Alerts</td>
+				 <td onclick="goTo('cg_contact.html')">cg_contact.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.6(d)</td>
+				 <td>JS functions</td>
+				 <td onclick="goTo('cg_about.html')">cg_about.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.7(a)</td>
+				 <td>Responsive website</td>
+				 <td onclick="goTo('index.html')">index.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.7(c)</td>
+				 <td>Responsive images</td>
+				 <td onclick="goTo('cg_about.html')">cg_about.html</td>
+			 </tr>
+			 <tr>
+				 <td>5.7(d)</td>
+				 <td>Responsive web form</td>
+				 <td onclick="goTo('cg_contact.html')">cg_contact.html</td>
+			 </tr>
+		 </table>	
+	 </div>
+	<script>
+		function goTo(fileName){
+			window.location.href=fileName
+		}
+		
+		function goToHomePage(){
+         window.location.href="index.html"
+      }
+
+      var lastUpdateElement = document.getElementById('lastUpdate');
+      var time = new Date();
+      var formatted = time.toLocaleTimeString();
+      lastUpdateElement.textContent = `Last updated: ${formatted}`
+	</script>
+</body>
+</html>

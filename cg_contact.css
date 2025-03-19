@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+/*
+   Final Project: Common Grounds Coffee Shop
+   
+   Typography and Color Styles for cg_contact.html
+   
+   Filename: cg_contact.css
+
+*/
+
+/* This fulfils requirement 5.3(b) and 5.6(b) */
+
+/*This fulfils requirement 5.2(c) and 5.2(g) */
+form {
+    background-color: #FCDFA9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 80%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+/*Layout for the form legends*/
+form#survey fieldset{
+    border-radius: 20px;
+    font-size: 0.85em;
+    padding: 10px;
+    margin: 10px;
+    border-color: #cc6c44;
+}
+form#survey fieldset#custInfo {
+    float: left;
+}
+
+form#survey fieldset#expInfo {
+    float: right;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    margin-bottom: 16px;
+}
+
+select:focus{
+    border-color: #f57621;
+    outline: none;
+}
+
+input:focus {
+    border-color: #f57621;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    background-color: #f57621;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+/* This fulfils requirement 5.2(d) */
+button:hover {
+    background-color: #592216;
+}
+
+#textarea {
+    height: 100px;
+    vertical-align: top;
+    width: 100%;
+    max-width: 300px;
+    min-width: 200px;
+}
+
+.row{
+    padding-top: 120px;
+    display: grid;
+    place-items: center;
+}
+
+/* This fulfils requirement 5.1(c) and 5.2(e) */
+body{
+    background-image: url("assets/CGmenu.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.optGroup {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: fit-content;
+	margin: 5px 0;
+    border-radius: 14px;
+	padding: 5px 20px 0 20px;
+}
+.optGroup input {
+    width: fit-content;
+    margin: 3px 0 0 10px;
+	height: 15px;
+}
+.optGroup label {
+    width: fit-content;
+    text-align: right;
+    margin-bottom: 12px;
+	font-size: 1em;
+}
+
+.optGroup input:last-child {
+    float: right;
+}
+
+div.row h1{
+   font-size: 25px;
+   text-align: center;
+}
+
+div.row p {
+   padding: 10px 60px 15px 60px;
+   font-size: 1em;
+   text-justify: auto;
+   float: left;
+   text-align: center;
+}
+
+#mailCB{
+    width: auto;
+    margin: 10px 0;
+}
+
+#mailCBLabel{
+    width: 90%;
+    float: right;
+    font-size: 12px;
+}

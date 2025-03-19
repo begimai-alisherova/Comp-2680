@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+/*
+   Final Project: Common Grounds Coffee Shop
+   
+   Typography and Color Styles for cg_about.html
+   
+   Filename: cg_about.css
+
+*/
+
+body {
+  background-image: linear-gradient(180, #FFF2D8, rgb(71, 52, 29));
+}
+
+
+
+/* Header Styles*/
+.header{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: 80px;
+  background: #FCDFA9;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+
+/* This fulfils requirement 5.2(b) */
+.header img{
+  height: 70px;
+  margin-left: 100px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+/* This fulfils requirement 5.2(h)*/
+.header img:active {
+  opacity: 0.6;
+}
+
+.horizontalNavigation {
+  white-space: nowrap;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  text-align: center;
+  align-items: center;
+}
+
+.horizontalNavigation a{
+  font-size: 1.4em;
+  color: #65423D;
+  text-decoration: none;
+}
+
+.horizontalNavigation a:hover{
+  color: #f57621;
+}
+
+
+
+/* Body Styles */
+.row {
+  height: 460px;
+}
+
+div h2{
+   font-size: 25px;
+   margin-top: 20px;
+   text-align: center;
+}
+
+div p, li{
+   margin: 15px 65px 0px 65px;
+   font-size: 1em;
+   text-justify: auto;
+   display: grid;
+   float: left;
+   text-align: center;
+}
+
+div.col-2-3 {
+  width: 55%;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  float: left;
+}
+
+div.col-1-3 {
+  width: 45%;
+  float: right;
+}
+
+div.col-2-3 img {
+  margin: 15px 25px 10px 15px;
+  border-radius: 30px;
+  width: 100%;
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count:inherit;
+  animation-direction: alternate;
+}
+
+
+
+
+/*Video Styles*/
+div.col-1-3 iframe {
+  margin: 10px 0px 10px 20px;
+  border-radius: 25px;
+  height: 400px;
+  width: 90%;
+  margin-right: 20px;
+  position: relative;
+}
+
+
+
+/*Animation styles */
+@keyframes example {
+  0%   {width: 30%}
+  50%  {width: 60%}
+  100% {width: 100%}
+}
+
+
+body {
+  min-height: 1500px !important;
+}
+/*Footer Styles*/
+.footer{
+  display: grid;
+  background-color: #FCDFA9;
+  margin-top: 40px;
+  height: 250px;
+  padding-top: 14px;
+  grid-template-columns: 33% 34% 33%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer div {
+   text-align: center;
+   align-items: center;
+}
+
+.footer div h1{
+  font-size: 1.4em;
+}
+
+.footer div p{
+  width: 100%;
+  margin: 0;
+}
+
+.footer div p i {
+  width: fit-content;
+}
+
+.padding {
+  padding-top: 80px;
+}

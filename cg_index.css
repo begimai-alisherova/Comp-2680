@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/*
+   Final Project: Common Grounds Coffee Shop
+   
+   Style Sheet for the Layout of Common Grounds Coffee Shop Home Page
+   Author: Begimai Alisherova
+   Date:   11/16/2023
+   
+   Filename: cg_index.css
+
+*/
+
+
+
+/* Body Header Styles */
+header {
+   background-color: #FCDFA9;
+   height: 80px;
+   position: fixed;
+   width: 100%;
+}
+
+body > header > img {  /*descendant selectors */
+   top: 4px;
+   display: block;
+   width: 70px;
+   margin-left: 100px;	
+   position: absolute;
+   cursor: pointer;
+}
+
+body > header > img:active {
+   opacity: 0.6;
+}
+
+
+
+/*Horizontal Navigation Styles */
+nav.horizontalNavigation{
+   white-space: nowrap;
+   height: 100%;
+   float: right;
+   width: 80%;
+   position: sticky;
+}
+
+nav.horizontalNavigation a {
+   font-size: 1.4em;
+   line-height: 3.5em;
+   text-align: center;
+   color: rgb(245, 17, 17);
+}  
+
+nav.horizontalNavigation a:link, 
+nav.horizontalNavigation a:visited {
+   color: #65423D;
+}
+
+nav.horizontalNavigation a:hover, 
+nav.horizontalNavigation a:active {
+   color: #f57621;
+}  
+
+nav.horizontalNavigation ul {
+   height: 100%;
+}
+
+body > header > nav.horizontalNavigation li {
+   width: 20%;
+   display: block;
+   float: left;
+   color: rgb(71, 52, 29);
+   text-align: center;
+}
+
+
+
+/*Story styles*/
+.story{
+   text-align: center;
+   display: block;
+   width: 100%;
+   float: left;
+   padding: 80px 50px 0
+}
+
+.story h1{
+   font-size: 32px;
+   margin-top: 32px;
+}
+
+.story img{
+   max-width: 1200px;
+   width: 100%;
+}
+
+.story p{
+   padding: 15px 30px;
+   font-size: 1em;
+   text-justify: auto;
+   width: 33%;
+   display: block;
+   float: left;
+   text-align: center;
+}
+
+.story1 p{
+	padding: 20px 80px;
+	font-size: 1em;
+	text-align: center;
+}
+
+/* Footer Styles */
+footer{
+   background-color: #FCDFA9;
+   margin-top: 40px;
+   height: 250px;
+   padding-top: 14px;
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+}
+
+footer section {
+   width: 33%;
+   float: left;
+   text-align: center;
+   padding-top: 14px;
+}
+
+footer section h1{
+   font-size: 24px;
+}
+
+footer section p{
+	padding-top: 13px;
+}
+
+footer section img{
+	padding-top: 15px;
+}

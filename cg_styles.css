@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/*
+   Final Project: Common Grounds Coffee Shop
+   
+   Typography and Color Styles for all web pages
+   
+   Filename: cg_styles.css
+
+*/
+
+/* HTML and Body Styles */
+html {
+   background-color: #FFF2D8;
+   /*font-family: Source Serif Pro;	*/
+   font-family: 'PT Serif';
+}
+
+/* This fulfils requirement 5.2(a) */
+body {
+   background-color: #FFF2D8; 
+   color: #65423D;
+   /*Centering a block element horizontally within the parent by setting both left and right margins to auto */
+   margin-left: auto;
+   margin-right: auto;
+   min-width: 640px;
+   position: relative;
+   height: 100vh;
+   min-height: 1300px;
+/* 95 of the parent which in this case is the browser window */
+/*Note height value is not set as browser automatically increases the height of the element to match content*/
+}
+
+div, p {
+	line-height: 1.5;
+}
+
+.title {
+   text-align: end;
+   padding-right: 30px;
+   padding-top: 10px;
+}
+
+/* Google maps */
+#location iframe {
+   border-radius: 16px;
+   margin-top: 8px;
+ }
+
+/*
+ HTML and Body Styles 
+html {
+   background-color: #FFF2D8;
+   font-family: Source Serif Pro;	
+}
+body {
+   background-color: #FFF2D8; 
+   color: #65423D;
+}
+
+
+
+ Horizontal Navigation Styles 
+nav.horizontalNavigation a {
+   font-size: 1.4em;
+   line-height: 1.8em;
+   text-align: center;
+}  
+
+nav.horizontalNavigation a:link, 
+nav.horizontalNavigation a:visited {
+   color: #65423D;
+}
+
+nav.horizontalNavigation a:hover, 
+nav.horizontalNavigation a:active {
+   background-color: rgb(71, 52, 29);
+}   
+
+
+
+Left Column Paragraph Styles
+section#leftColumn p {
+   color: rgb(248, 248, 186);
+   font-size: 0.9em;
+   line-height: 1.6em;
+}
+
+
+
+ Footer Styles 
+body > footer {
+   font-size: 0.9em;
+   color: rgb(186, 186, 156);
+}
+
+body > footer h1 {
+   color: rgb(248, 248, 186);
+   font-size: 1.1em;
+   font-weight: normal;
+   letter-spacing: 0.2em;
+   margin: 1em 0 0.5em 1em;
+}
+
+
+
+ Vertical Navigation Styles 
+nav.verticalNavigation ul {
+   margin-left: 1em;
+   line-height: 2em;
+}
+
+nav.verticalNavigation a:link, 
+nav.verticalNavigation a:visited {
+   color: rgb(186, 186, 156);
+}
+
+nav.verticalNavigation a:hover, 
+nav.verticalNavigation a:active {
+   text-decoration: underline;
+}
+
+
+
+ Contact Info Styles 
+section#contactInfo p {
+   line-height: 1.4em;
+   margin: 1em;
+}   
+*/

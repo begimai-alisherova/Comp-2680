@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+    Final Project: Common Grounds Coffee Shop
+    
+    Home Page of Common Grounds Coffee Shop
+    Author: Begimai Alisherova
+    Date:   11/16/2023
+
+    Filename: index.html
+   -->
+   
+   <!--- This fulfils requirement 5.1(e) -->
+   <meta charset="utf-8" />
+   <meta name="keywords" content="coffee, tru, TRU, lunch, sandwiches" />
+   <meta name="author" content="Begimai Alisherova"/>
+   <title>Common Grounds - Home</title>
+   <link href="cg_reset.css" rel="stylesheet" />
+   <link href="cg_index.css" rel="stylesheet" />
+   <link href="cg_styles.css" rel="stylesheet" />
+   <script src="https://kit.fontawesome.com/3f7779b181.js" crossorigin="anonymous"></script>
+   <link href='https://fonts.googleapis.com/css?family=PT Serif' rel='stylesheet'>
+</head>
+
+<!--- This fulfils requirement 5.2(f) and 5.7(a) -->
+<body>
+   <header>
+      <img src="cg_logo.svg" onclick="goToHomepage()" alt="Common Grounds Logo" />
+         <nav class="horizontalNavigation">
+            <ul>
+               <li><a href="index.html"> Home</a></li>
+               <li><a href="cg_about.html"> About Us</a></li>
+               <li><a href="cg_contact.html"> Contact Us</a></li>
+               <li><a href="cg_crossRef.html">Cross-Ref</a></li>
+            </ul>
+         </nav>
+   </header>
+
+	<!--- This fulfils requirement 5.1(a) -->
+   <section class="story">
+	  <!--- This fulfils requirement 5.1(b) -->
+      <img src="cg_header.png" alt="Common Grounds Drinks" />
+      <h1>Our Story</h1>
+      <p>Welcome to Common Grounds Coffee Shop, where sustainability and community come together in every cup. Our journey began
+	  with a simple idea: to create a space on campus where students could enjoy exceptional coffee and food while making a positive
+	  impact on the environment and their fellow students.</p>
+	  <p>Founded and run by students, Common Grounds is more than just a coffee shop. It's a commitment to ethical and sustainable practices.
+	  Our story is one of fair trade, organic beans sourced from cooperatives and roasted locally for a fresh, rich flavor. It's about using 100%
+	  renewable resources for our coffee and soup cups, which compost in as little as 45 days.</p>
+	  <p>Join us in the journey towards a better world, one cup at a time. Discover our menu of Bean Around the World coffees and fresh,
+	  locally sourced food options. Explore the ways you can make a difference with us through our membership benefits and our commitment to sustainability.</p>
+   </section>
+
+	<section class="story1">
+	  <p>At Common Grounds, our story is about brewing change, and we invite you to be a part of it.<br />
+	  Common Grounds Coffee Shop: Where coffee, community, and sustainability meet.<br />
+	  Discover our commitment, explore our menu, and join our community today.	
+      </p>
+	</section>
+
+   <footer>
+      <section id="hours">
+         <h1>Hours:</h1>
+         <p>Monday - Friday: <br />
+            8am - 9pm <br />
+            Saturday - Sunday: <br />
+            10am - 9pm </p>
+      </section>
+      <section id="location">
+         <h1>Location:</h1>
+		 <!--- This fulfils requirement 5.1(f) -->
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.5430653047097!2d-120.36650949999999!3d50.6727439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537e2cf45404cbe3%3A0x880a4b6b43aedb80!2sCommon%20Grounds!5e0!3m2!1sru!2skg!4v1701112634564!5m2!1sru!2skg" width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         <p id="lastUpdate"></p>
+      </section>
+      <section id="contactInfo">
+         <h1>Contact Us:</h1>
+         <p><i class="fa-solid fa-location-dot"></i>
+	       1055 University Dr, Kamloops, BC<br />
+		   <i class="fas fa-envelope"></i> 
+           cgcoffee@trusu.com<br />
+		   <i class="fa-solid fa-phone"></i>
+		   236-000-0000
+         </p>
+      </section>
+   </footer>
+   <script>
+      function goToHomepage(){
+         window.location.href="index.html"
+      }
+
+      var lastUpdateElement = document.getElementById('lastUpdate');
+      var time = new Date();
+      var formatted = time.toLocaleTimeString();
+      lastUpdateElement.textContent = `Last updated: ${formatted}`
+   </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+    Final Project: Common Grounds Coffee Shop
+    
+    About Us Page of Common Grounds Coffee Shop
+    Author: Begimai Alisherova
+    Date:   11/16/2023
+
+    Filename: cg_about.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="keywords" content="coffee, tru, TRU, lunch, sandwiches" />
+   <meta name="author" content="Begimai Alisherova"/>
+   <title>Common Grounds - About Us</title>
+   <link href="cg_reset.css" rel="stylesheet" />
+   <link href="cg_about.css" rel="stylesheet" />
+   <link href="cg_styles.css" rel="stylesheet" />
+   <link href='https://fonts.googleapis.com/css?family=PT Serif' rel='stylesheet'>
+   <script src="https://kit.fontawesome.com/3f7779b181.js" crossorigin="anonymous"></script>
+
+   <!-- Link styling -->
+   <style>
+
+   </style>
+</head>
+
+
+<!--- This fulfils requirement 5.2(f) -->
+<body>
+   <div class="header">
+	  <!--- This fulfils requirement 5.1(b) -->
+      <img src="cg_logo.svg" onclick="goToHomepage()" alt="Common Grounds Logo" />
+         <div class="horizontalNavigation">
+               <a href="index.html">Home</a>
+               <a href="cg_about.html">About Us</a>
+               <a href="cg_contact.html">Contact Us</a>
+               <a href="cg_crossRef.html">Cross-Ref</a>
+         </div>
+   </div>
+
+	<!--First row -->
+	<div class="row padding">
+		<!--First col -->
+		<div class="col-2-3">
+			<!--Content in left col-->
+			<!--- This fulfils requirement 5.5(b) and 5.7(c) -->
+			<img src="cg_about1.png" alt="Common Grounds About Us Photo 1" />
+		</div>
+		
+		<!--Second col -->
+		<div class="col-1-3">
+			<!--Content in right col-->
+			<br /><br /><br />
+			<h2>About Us</h2>
+			<p>At Common Grounds Coffee Shop, we believe in the power of coffee, community, and conscious choices. Our story is one of a student-owned
+			and operated coffee shop located at the heart of Thompson Rivers University. Common Grounds was founded on the idea
+			that a coffee shop can be more than a place to grab a quick cup of joe. It can be a hub of change and camaraderie. Our mission is to serve
+			not just great coffee but a great purpose – one that's grounded in sustainability, ethical standards, and a sense of togetherness. 
+			</p>
+		</div>
+	</div>
+	
+	<!--Second row -->
+	<div class="row">
+		<!-- First col -->
+		<div class="col-2-3">
+			<!--Content in left col-->
+			<h2>Our Mission</h2>
+			<p>Our mission is simple but profound: to brew sustainability, one cup at a time. We are committed to making
+			choices that matter - for our planet, our community, and you. Here's what that means to us:
+			</p>
+			<ul style="list-style-type:circle">
+				<li><b>Sustainability</b> We source our coffee beans from cooperatives, ensuring fair compensation for field workers and
+				the highest level of equity for the plantations. Our cups and containers are biodegradable and compostable.
+				We're on a journey to reduce our environmental footprint every day.</li>
+				<li><b>Ethical Standards</b> Our student employees are not just workers; they're family. We offer living wages and flexible
+				schedules based on your class schedule. We believe that students deserve fair and flexible employment.</li>
+				<li><b>Quality and Community</b> Our coffee is provided by Bean Around the World, and our food is sourced from Twin Rivers Cuisine,
+				a local business led by top-caliber chefs. We take pride in offering high-quality options to keep our members well-fed throughout the day.</li>
+			</ul>
+		</div>
+		
+		<!--Second col -->
+		<div class="col-1-3">
+			<!--Content in right col-->
+			<!--- This fulfils requirement 5.5(a) -->
+			<iframe 
+				src="https://www.youtube.com/embed/NbLnI8CStT4?si=VQBNe9XIrrllIzP5">
+			</iframe>
+		</div>
+	</div>
+
+
+	<div class="footer">
+		<div id="hours">
+			<h1>Hours:</h1>
+			<p>Monday - Friday: <br />
+			8am - 9pm <br />
+			Saturday - Sunday: <br />
+			10am - 9pm </p>
+		</div>
+		<div id="location">
+			<h1>Location:</h1>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.5430653047097!2d-120.36650949999999!3d50.6727439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537e2cf45404cbe3%3A0x880a4b6b43aedb80!2sCommon%20Grounds!5e0!3m2!1sru!2skg!4v1701112634564!5m2!1sru!2skg" width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<!--- This fulfils requirement 5.1(g) -->
+			<p id="lastUpdate"></p>
+		</div>
+		<div id="contactInfo">
+			<h1>Contact Us:</h1>
+			<p>
+			<span>
+				<i class="fa-solid fa-location-dot"></i>
+				1055 University Dr, Kamloops, BC
+			</span>
+			<span>
+				<i class="fa-solid fa-envelope"></i>
+				cgcoffee@trusu.com
+			</span>
+			<span>
+				<i class="fa-solid fa-phone"></i>
+				236-000-0000
+			</span>
+			</p>
+		</div>
+	</div>
+	<script>
+		function goToHomepage() {
+         	window.location.href='index.html'
+      	}
+
+		var lastUpdateElement = document.getElementById('lastUpdate');
+		var time = new Date();
+		var formatted = time.toLocaleTimeString();
+		lastUpdateElement.textContent = `Last updated: ${formatted}`
+	</script>
+</body>
+</html>

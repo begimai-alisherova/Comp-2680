@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+    Final Project: Common Grounds Coffee Shop
+    
+    Contact Us Page of Common Grounds Coffee Shop
+    Author: Begimai Alisherova
+    Date:   11/16/2023
+
+    Filename: cg_contact.html
+   -->
+   
+   <meta charset="utf-8" />
+   <meta name="keywords" content="coffee, tru, TRU, lunch, sandwiches" />
+   <meta name="author" content="Begimai Alisherova" />
+   <title>Common Grounds - Contact Us</title>
+   <link href="cg_reset.css" rel="stylesheet" />
+   <link href="cg_index.css" rel="stylesheet" />
+   <link href="cg_contact.css" rel="stylesheet" />
+   <link href="cg_styles.css" rel="stylesheet" />
+   <link href='https://fonts.googleapis.com/css?family=PT Serif' rel='stylesheet'>
+   <script src="https://kit.fontawesome.com/3f7779b181.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+<header>
+   <img src="cg_logo.svg" onclick="goToHomepage()" alt="Common Grounds Logo" />
+      <nav class="horizontalNavigation">
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cg_about.html">About Us</a></li>
+            <li><a href="cg_contact.html">Contact Us</a></li>
+            <li><a href="cg_crossRef.html">Cross-Ref</a></li>
+         </ul>
+      </nav>
+</header>
+
+<!--First row -->
+<div class="row">
+    <h1>Customer Survey</h1>
+    <p>Thank you for taking our customer survey. Your response 
+    helps Common Grounds Coffee Shop maintain the tradition that has made 
+    us the top-rated coffee shop in TRU.
+    All participants are automatically entered into a monthly
+    drawing to receive a Common Grounds Gift Card containing 
+    20$. Check your e-mail inbox for contest results. </p>
+    <p>Surveys are private and confidential. Common Grounds
+    Coffee Shop will not share your contact information with third 
+    parties, ever. </p>
+	<!--- This fulfils requirement 5.1(d) -->
+    <p>Required values are marked by an asterisk (&nbsp;*&nbsp;)</p>
+	  
+	<!--- This fulfils requirement 5.3(a) and 5.7(d) -->
+    <!-- Start of form-->
+    <form id="survey">
+		<fieldset id="custInfo">
+		<legend>Customer Information</legend>
+		
+			<label for="name">Name*:</label>
+			<input placeholder="Begimai Alisherova" type="text" id="name" name="name" required>
+
+			<label for="email">Email*:</label>	
+			<input placeholder="begimai@gmail.com" type="email" id="email" name="email" required>
+
+			<label for="phone">Phone Number*:</label>
+			<input placeholder="+12369873333" type="tel" id="phone" name="phone" required>
+
+			<label>Where did you hear about us?</label>
+			<select id="select">
+				<option disabled selected hidden value="">Select</option>
+				<option>Social media</option>
+				<option>Search engines</option>
+				<option>Internet ads</option>
+				<option>Referral</option>
+				<option>Other</option>
+			</select>
+			
+			<div class="formRow">
+				<label for="dineSpin">How many times do you drink coffee per month?</label>
+				<input name="dineOut" id="dineSpin" type="number" value="0" step="1" min="0" max="30" />
+            </div>
+			
+			<input name="mailMe" id="mailCB" value="yes" type="checkbox" checked />
+         <label for="mailCB" id="mailCBLabel">Add me to your mailing list for great coupons and specials!</label>
+		
+		</fieldset>
+		
+		<fieldset id="expInfo">
+			<legend>Share Your Experience at Common Grounds Coffee Shop</legend>
+            
+            <div class="formRow">
+               <label for="visit">Date of visit</label>
+               <input name="visitDate" id="visit" type="date" />
+            </div>  
+
+            <div class="formRow">
+               <label for="order">Order type</label>
+               <select name="orderType" id="order" size="3">
+			   <optgroup label="Delivery Options">
+                  <option value="order1">Carry out</option>
+                  <option value="order2" selected>Dine in</option>
+				  <option value="order3">Delivery</option>
+				</optgroup>
+               </select>
+            </div>
+
+            <div class="formRow">
+               <label>Was your service friendly?</label>
+               <fieldset class="optGroup">
+                  <label for="fYes">Yes</label>
+                  <input name="sFriend" id="fYes" value="yes" type="radio" />
+                  <label for="fNo">No</label>
+                  <input name="sFriend" id="fNo" value="no" type="radio" />
+               </fieldset>
+            </div>
+			
+            <label for="textarea" required>Tell us more about your experience!</label>
+            <textarea name="textarea" id="textarea" rows="5" cols="15" wrap="soft"></textarea> 
+        </fieldset>
+        <div></div>
+           <button type="button" onclick="validateForm()">Submit</button>
+	</form>
+	
+	<!--- This fulfils requirement 5.3(c), 5.6(c), and 5.6(d) -->
+	<script>
+      function goToHomepage() {
+         window.location.href='/'
+      }
+
+      function validateForm() {
+          var nameInput = document.getElementById('name');
+          var emailInput = document.getElementById('email');
+          var phoneInput = document.getElementById('phone');
+          var textInput = document.getElementById('textarea')
+          var selectInput = document.getElementById('select')
+          var dateInput = document.getElementById('visit')
+          var serviceFriendly = document.getElementsByName('sFriend')
+          console.log(232323,serviceFriendly);
+
+            let formattedPhone = phoneInput.value.trim().replace(/\s/g, "")
+            let isPhoneValid = formattedPhone.length > 5 && formattedPhone.startsWith('+1') && formattedPhone.length > 10
+
+            let isEmailValid = emailInput.value.includes("@" && '.') && emailInput.value.indexOf('@') < emailInput.value.lastIndexOf('.')
+         emailInput.style.borderColor = "#ccc"
+         phoneInput.style.borderColor = "#ccc"
+          if (nameInput.value === '' || emailInput.value === '' || phoneInput.value === '' || textInput.value === '' 
+          || selectInput.value === '' || dateInput.value === '' || !(serviceFriendly[0].checked || serviceFriendly[1].checked)) {
+              alert('Please fill out all fields.');
+          } 
+          else if (!isEmailValid){
+            alert('Please fill valid email')
+            emailInput.style.borderColor="red"
+          }
+          else if (!isPhoneValid){
+            phoneInput.style.borderColor="red"
+            alert('Please fill valid phone number!')
+          }
+          else {
+              alert('Form submitted successfully!');
+          }
+      }
+	</script>
+</div>
+
+<footer>
+   <section id="hours">
+      <h1>Hours:</h1>
+      <p>Monday - Friday: <br />
+         8am - 9pm <br />
+         Saturday - Sunday: <br />
+         10am - 9pm </p>
+   </section>
+   <section id="location">
+      <h1>Location:</h1>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.5430653047097!2d-120.36650949999999!3d50.6727439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537e2cf45404cbe3%3A0x880a4b6b43aedb80!2sCommon%20Grounds!5e0!3m2!1sru!2skg!4v1701112634564!5m2!1sru!2skg" width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p id="lastUpdate"></p>
+   </section>
+   <section id="contactInfo">
+      <h1>Contact Us:</h1>
+      <p><i class="fa-solid fa-location-dot"></i>
+	     1055 University Dr, Kamloops, BC<br />
+		 <i class="fas fa-envelope"></i> 
+         cgcoffee@trusu.com<br />
+		 <i class="fa-solid fa-phone"></i>
+		 236-000-0000
+      </p>
+	</section>
+</footer>
+
+<!--- This fulfils requirement 5.6(a) -->
+<script>
+    var lastUpdateElement = document.getElementById('lastUpdate');
+      var time = new Date();
+      var formatted = time.toLocaleTimeString();
+      lastUpdateElement.textContent = `Last updated: ${formatted}`
+	  
+	  function goToHomepage(){
+         window.location.href="index.html"
+      }
+
+      var lastUpdateElement = document.getElementById('lastUpdate');
+      var time = new Date();
+      var formatted = time.toLocaleTimeString();
+      lastUpdateElement.textContent = `Last updated: ${formatted}`
+</script>
+
+</body>
+</html>
